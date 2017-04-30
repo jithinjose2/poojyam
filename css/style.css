@@ -1,0 +1,407 @@
+﻿/* ============================================================================================== 
+This copyright notice must be kept untouched in the stylesheet at all times.
+The original version of this stylesheet and the associated (x)html 
+is available at http://www.script-tutorials.com/responsive-website-using-bootstrap/
+Copyright (c) Script Tutorials. All rights reserved.
+This stylesheet and the associated (x)html may be modified in any way to fit your requirements.
+================================================================================================= */
+
+/* customized carousel */
+body {
+    /* all the tags up to .fullscreen-cont must have this style */
+    background:transparent url('../img/1240x885.png') center center no-repeat;
+    background-size:cover;
+}
+.carousel {
+    height: 100%;
+    margin-bottom: 50px;
+}
+.carousel-caption {
+    z-index: 10;
+}
+.carousel .item {
+    height: 100%;
+    padding-top : 80px;
+}
+
+.game-field{
+    height:500px;
+    padding-bottom: 100px;
+    padding-right : 15px;
+}
+
+.dot {
+	width: 8px;
+	height: 8px;
+	float: left;
+	border-radius: 3px;
+	border: 1px solid #a7a7a7;
+}
+.len {
+    width: 48px;
+    height: 8px;
+    border-radius: 3px;
+}
+.wid {
+    width: 8px;
+    height: 45px;
+    border-radius: 3px;
+}
+.clear{
+    clear: both;
+}
+
+.len, .wid{
+    /*border: 1px solid #4b4b4b;*/
+    float: left;
+    cursor: pointer;
+}
+
+.len:hover, .wid:hover{
+    background-color: #a7a7a7;
+	border: 1px solid #a7a7a7;
+}
+
+.selected{
+    background-color: #333333 !important;
+    cursor: auto;
+}
+
+.box_selected{
+    background-color: #f8f8f8 !important;
+    cursor: auto;
+}
+
+.box {
+    height: 45px;
+    width: 48px;
+    float: left;
+    padding: 5px;
+}
+
+h4 {
+	font-size : 17px;
+}
+.card {
+	background-color: #f7f7f7;
+	padding: 20px 25px 30px;
+	margin: 0 auto 25px;
+	width: 330px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	-moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+.card input[type=email], .card input[type=password], .card input[type=text], .card input[type=submit] {
+width: 100%;
+display: block;
+position: relative;
+font-size:12px;
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+input[type=email], input[type=number], input[type=password], input[type=tel], input[type=text], input[type=url] {
+-moz-appearance: none;
+-webkit-appearance: none;
+appearance: none;
+display: inline-block;
+height: 40px;
+padding: 0 8px;
+margin-bottom: 5px;
+background: #fff;
+border: 1px solid #d9d9d9;
+border-top: 1px solid #c0c0c0;
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+-moz-border-radius: 1px;
+-webkit-border-radius: 1px;
+border-radius: 1px;
+font-size: 15px;
+color: #404040;
+}
+
+.btn{
+border: 1px solid #2f5bb7 !important;
+color: #fff !important;
+text-shadow: 0 1px rgba(0,0,0,0.3) !important;
+background-color: #528beb !important;
+background-image: -webkit-linear-gradient(top,#4d90fe,#528beb) !important;
+background-image: -moz-linear-gradient(top,#4d90fe,#528beb) !important;
+background-image: -ms-linear-gradient(top,#4d90fe,#528beb) !important;
+background-image: -o-linear-gradient(top,#4d90fe,#528beb) !important;
+background-image: linear-gradient(top,#4d90fe,#528beb) !important;
+}
+
+.btn:hover{
+border: 1px solid #2f5bb7 !important;
+color: #fff !important;
+text-shadow: 0 1px rgba(0,0,0,0.3) !important;
+background-color: #357ae8 !important;
+background-image: -webkit-linear-gradient(top,#4d90fe,#357ae8) !important;
+background-image: -moz-linear-gradient(top,#4d90fe,#357ae8) !important;
+background-image: -ms-linear-gradient(top,#4d90fe,#357ae8) !important;
+background-image: -o-linear-gradient(top,#4d90fe,#357ae8) !important;
+background-image: linear-gradient(top,#4d90fe,#357ae8) !important;
+}
+
+.tabs {
+position: relative;   
+height: 320px;
+clear: both;
+}
+.tab {
+float: left;
+}
+.tab label {
+background: #eee; 
+padding: 10px; 
+border: 1px solid #ccc; 
+margin-left: -1px; 
+position: relative;
+left: 1px; 
+}
+.tab [type=radio] {
+display: none;   
+}
+.content {
+position: absolute;
+width: 100%;
+top: 41px;
+left: 0;
+background: white;
+right: 0;
+bottom: 0;
+padding: 20px 20px 20px 2px;
+border-top: 1px solid #ccc; 
+}
+.content > * {
+opacity: 0;
+
+-webkit-transform: translate3d(0, 0, 0);
+
+-webkit-transform: translateX(-100%);
+-moz-transform:    translateX(-100%);
+-ms-transform:     translateX(-100%);
+-o-transform:      translateX(-100%);
+
+-webkit-transition: all 0.6s ease;
+-moz-transition:    all 0.6s ease;
+-ms-transition:     all 0.6s ease;
+-o-transition:      all 0.6s ease;
+}
+[type=radio]:checked ~ label {
+background: white;
+border-bottom: 1px solid white;
+z-index: 2;
+}
+[type=radio]:checked ~ label ~ .content {
+z-index: 1;
+}
+[type=radio]:checked ~ label ~ .content > * {
+opacity: 1;
+
+-webkit-transform: translateX(0);
+-moz-transform:    translateX(0);
+-ms-transform:     translateX(0);
+-o-transform:      translateX(0);
+}
+
+@media (max-width: 419px) and (min-width: 341px) {
+    .dot {
+        width: 8px;
+        height: 8px;
+        float: left;
+        border-radius: 3px;
+        border: 1px solid #a7a7a7;
+    }
+    .len {
+        width: 35px;
+        height: 8px;
+        border-radius: 3px;
+    }
+    .wid {
+        width: 8px;
+        height: 35px;
+        border-radius: 3px;
+    }    
+    .box {
+        height: 35px;
+        width: 35px;
+        float: left;
+        padding: 5px;
+    }
+    .game-field{
+		height:275px;
+		margin-bottom: 50px;
+		padding-bottom: 50px;
+		padding-left : 15px;
+		padding-right : 15px;
+		padding-top : 15px;
+    }
+}
+
+@media (max-width: 1199px) and (min-width: 992px) {
+    .dot {
+        width: 8px;
+        height: 8px;
+        float: left;
+        border-radius: 3px;
+        border: 1px solid #a7a7a7;
+    }
+    .len {
+        width: 35px;
+        height: 8px;
+        border-radius: 3px;
+    }
+    .wid {
+        width: 8px;
+        height: 35px;
+        border-radius: 3px;
+    }    
+    .box {
+        height: 35px;
+        width: 35px;
+        float: left;
+        padding: 5px;
+    }
+    .game-field{
+		height:275px;
+		margin-bottom: 50px;
+		padding-bottom: 50px;
+		padding-left : 15px;
+		padding-right : 15px;
+		padding-top : 15px;
+    }
+}
+
+@media (max-width: 341px) and (min-width: 301px){
+    .dot {
+        width: 8px;
+        height: 8px;
+        float: left;
+        border-radius: 3px;
+        border: 1px solid #a7a7a7;
+    }
+    .len {
+        width: 25px;
+        height: 8px;
+        border-radius: 3px;
+    }
+    .wid {
+        width: 8px;
+        height: 25px;
+        border-radius: 3px;
+    }    
+    .box {
+        height: 25px;
+        width: 25px;
+        float: left;
+        padding: 5px;
+    }
+    .game-field{
+		height:220px;
+		margin-bottom: 50px;
+		padding-bottom: 50px;
+		padding-left : 15px;
+		padding-right : 15px;
+		padding-top : 15px;
+    }
+}
+
+@media (max-width: 991px) and (min-width: 768px){
+    .dot {
+        width: 8px;
+        height: 8px;
+        float: left;
+        border-radius: 3px;
+        border: 1px solid #a7a7a7;
+    }
+    .len {
+        width: 25px;
+        height: 8px;
+        border-radius: 3px;
+    }
+    .wid {
+        width: 8px;
+        height: 25px;
+        border-radius: 3px;
+    }    
+    .box {
+        height: 25px;
+        width: 25px;
+        float: left;
+        padding: 0px;
+		font-size: 14px !important;
+    }
+    .game-field{
+		height:375px;
+		margin-bottom: 50px;
+		padding-bottom: 50px;
+		padding-left : 15px;
+		padding-right : 15px;
+		padding-top : 15px;
+    }
+	
+}
+
+@media (max-width: 300px){
+    .dot {
+        width: 6px;
+        height: 6px;
+        float: left;
+        border-radius: 2px;
+        border: 1px solid #a7a7a7;
+    }
+    .len {
+        width: 15px;
+        height: 6px;
+        border-radius: 2px;
+    }
+    .wid {
+        width: 6px;
+        height: 15px;
+        border-radius: 2px;
+    }    
+    .box {
+        height: 15px;
+        width: 15px;
+        float: left;
+        padding: 5px;
+    }
+    .game-field{
+		height:220px;
+		margin-bottom: 50px;
+		padding-bottom: 50px;
+		padding-left : 15px;
+		padding-right : 15px;
+		padding-top : 15px;
+    }
+}
+
+body{
+	background-color: #323232 !important;
+}
+
+.justclicked{
+	-webkit-animation:myfirst 10s; /* Chrome, Safari, Opera */
+	animation:myfirst 10s;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes myfirst
+{
+	0%   {background:white;}
+	100% {background:#A7A7A7;}
+}
+
+/* Standard syntax */
+@keyframes myfirst
+{
+	0%   {background:white;}
+	100%  {background:#A7A7A7;}
+}

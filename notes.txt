@@ -1,0 +1,8 @@
+TODO
+
+1. Finakize signup,signin,forgotpassword.
+2. Profile Edit option.
+3. Display user status and name on header.
+4. Gmae list final design.
+5. Game design check.
+6. CodeFlow Check.

@@ -1,0 +1,25 @@
+RewriteEngine on
+
+RewriteBase /
+
+RewriteCond %{HTTP_HOST} ^poojyam.in$
+RewriteRule ^$ index.php [L]
+
+RewriteRule ^game_play/([^/]+)/([^/]+)?$ game1.php?game_id=$1&page=$2 [QSA,L]
+
+RewriteRule ^game_join/([^/]+)/?$ game_join1.php?game_id=$1 [QSA,L]
+
+RewriteRule ^join/([^/]+)/?$ game_join_fb.php?game_id=$1 [QSA,L]
+
+RewriteRule ^game_image_([^/]+)_result.png?$ game_image_new1.php?game_id=$1 [QSA,L]
+
+RewriteRule ^game_new$ game_new1.php [QSA,L]
+
+RewriteRule ^email_varify/([^/]+)/?$ email_varify1.php?email_hash=$1 [QSA,L]
+
+RewriteRule ^openid$ openid1.php [QSA,L]
+RewriteRule ^home$ home1.php [QSA,L]
+
+RewriteRule ^openid/([^/]+)?$ openid1.php?provider=$1 [QSA,L]
+
+RewriteRule ^privacy-policy$ privacy_policy.php [QSA,L]
